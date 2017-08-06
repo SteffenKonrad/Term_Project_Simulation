@@ -6,7 +6,7 @@
 <modelVersion>4.0.0</modelVersion>
 
 <groupId>Term_Project_Simulation_TH-Bingen</groupId>
-<artifactId>traffic-simulation</artifactId>
+<artifactId>HelloWorld</artifactId>
 <version>1.0</version>
 
 <properties>
