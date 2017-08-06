@@ -1,10 +1,10 @@
 package main.kotlin.HelloWorld
 
-fun main(args: Array<String>) {
 
-
-    println("Hello World")
-
+fun getHelloWorldString(): String {
+    return "Hello World!!!"
 
 }
-
+fun main(args: Array<String>) {
+    println(getHelloWorldString())
+}

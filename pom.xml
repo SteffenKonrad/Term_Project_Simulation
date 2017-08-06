@@ -38,7 +38,7 @@
 
 <build>
 	<sourceDirectory>${project.basedir}/src/HelloWorld</sourceDirectory>
-	<testSourceDirectory>${project.basedir}/src/test</testSourceDirectory>
+	<testSourceDirectory>${project.basedir}/src/tests</testSourceDirectory>
 	<plugins>
 		<plugin>
 			<artifactId>kotlin-maven-plugin</artifactId>
