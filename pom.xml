@@ -7,12 +7,12 @@
 
 <groupId>Term_Project_Simulation_TH-Bingen</groupId>
 <artifactId>HelloWorld</artifactId>
-<version>1.0</version>
+<version>1.0-SNAPSHOT</version>
 
 <properties>
 	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	<kotlin.version>1.1.3-2</kotlin.version>
-	<main.class>HelloWorld.kt</main.class>
+	<main.class>HelloWorld.MainKt</main.class>
 </properties>
 
 <dependencies>
@@ -37,8 +37,8 @@
 </dependencies>
 
 <build>
-	<sourceDirectory>${project.basedir}/src/main/kotlin</sourceDirectory>
-	<testSourceDirectory>${project.basedir}/src/test/kotlin</testSourceDirectory>
+	<sourceDirectory>${project.basedir}/src/HelloWorld</sourceDirectory>
+	<testSourceDirectory>${project.basedir}/src/test</testSourceDirectory>
 	<plugins>
 		<plugin>
 			<artifactId>kotlin-maven-plugin</artifactId>
