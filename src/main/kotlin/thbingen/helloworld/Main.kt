@@ -1,4 +1,4 @@
-package projects.helloworld
+package thbingen.helloworld
 
 
 fun getHelloWorldString(): String {

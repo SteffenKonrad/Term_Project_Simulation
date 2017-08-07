@@ -1,8 +1,7 @@
-package projects.helloworld
+package thbingen.helloworld
 
 import org.junit.Assert.assertEquals
 import org.junit.Test
-
 
 class HelloWorldTest {
 
