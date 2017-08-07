@@ -5,7 +5,7 @@
 
 <modelVersion>4.0.0</modelVersion>
 
-<groupId>Term-Project_Simulation</groupId>
+<groupId>Term_Project_Simulation</groupId>
 <artifactId>Traffic-Simulation</artifactId>
 <version>1.0-SNAPSHOT</version>
 
@@ -35,6 +35,7 @@
 		<scope>test</scope>
 	</dependency>
 </dependencies>
+
 
 <build>
 	<sourceDirectory>${project.basedir}/src/main/kotlin/helloworld</sourceDirectory>
