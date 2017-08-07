@@ -1,4 +1,4 @@
-package thbingen.helloworld
+package traffic_simulation.helloworld
 
 
 fun getHelloWorldString(): String {

@@ -1,4 +1,4 @@
-package thbingen.helloworld
+package traffic_simulation.helloworld
 
 import org.junit.Assert.assertEquals
 import org.junit.Test
