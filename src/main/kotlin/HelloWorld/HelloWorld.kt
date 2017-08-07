@@ -1,4 +1,4 @@
-package main.kotlin.HelloWorld
+package helloworld
 
 
 fun getHelloWorldString(): String {
