@@ -1,6 +1,6 @@
-package HelloWorldTest
+package helloworldtest
 
-import main.kotlin.HelloWorld.getHelloWorldString
+import helloworld.getHelloWorldString
 import org.junit.Assert.assertEquals
 import org.junit.Test
 
