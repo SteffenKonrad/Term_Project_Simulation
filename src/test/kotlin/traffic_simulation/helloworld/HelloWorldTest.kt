@@ -1,9 +1,7 @@
-package helloworldtest
+package traffic_simulation.helloworld
 
-import helloworld.getHelloWorldString
 import org.junit.Assert.assertEquals
 import org.junit.Test
-
 
 class HelloWorldTest {
 
