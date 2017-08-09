@@ -16,6 +16,7 @@ package traffic_simulation2
             else
             {
                 var capacity = var capacity +1
+                val drives = true
             }
 
             println("car drives= $drives and there are $capacity cars on track. ")
