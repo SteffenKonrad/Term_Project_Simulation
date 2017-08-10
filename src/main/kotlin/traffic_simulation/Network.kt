@@ -1,9 +1,6 @@
 package traffic_simulation
 
-class Network(var capacity: Int) {
-
-
-    val listOfDrivingCars: MutableList<Car> = mutableListOf()
+class Network(var capacity: Int, val listOfDrivingCars: MutableList<Car> = mutableListOf()) {
 
     // function to tally the cars on the road
 

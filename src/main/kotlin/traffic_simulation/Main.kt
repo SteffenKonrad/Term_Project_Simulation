@@ -10,7 +10,7 @@ import com.univocity.parsers.csv.CsvWriterSettings
 
 fun main(args: Array<String>) {
 
-
+    scenario()
 }
 
 fun readCsvFile(fileName: String): Car {
@@ -42,7 +42,7 @@ fun readCsvFile(fileName: String): Car {
         val secondValue: String = car.values.get(1) // second value of the csv assigned to driving status
         val drivingStatus = secondValue.toBoolean()
 
-        listOfCars.add(Car(carName = firstValue, driving = drivingStatus))
+        listOfCars.add(Car(carname = firstValue, driving = drivingStatus))
     }
     return Car // error here....
 }
@@ -60,8 +60,32 @@ fun outputToCsv(fileName: String) {
 
 
 // scenario function to test if everything works
+// Manually created list containing a dozen cars. With a print output in the console to test
 
 fun scenario() {
+
+    val Car1: Car = Car(carname = "Elenor", driving = true)
+    val Car2: Car = Car(carname = "K.I.T.T.", driving = false)
+    val Car3: Car = Car(carname = "Herbie", driving = true)
+    val Car4: Car = Car(carname = "PussyWagon", driving = false)
+    val Car5: Car = Car(carname = "McQueen", driving = false)
+    val Car6: Car = Car(carname = "GeneralLee", driving = true)
+    val Car7: Car = Car(carname = "MantaManta", driving = true)
+    val Car8: Car = Car(carname = "AMCPacer", driving = true)
+    val Car9: Car = Car(carname = "Batmobil", driving = true)
+    val Car10: Car = Car(carname = "GrandTorino", driving = true)
+    val Car11: Car = Car(carname = "DeLorean", driving = true)
+    val Car12: Car = Car(carname = "Ecto-1", driving = false)
+
+    val carList: List<Car> = listOf(Car1, Car2, Car3, Car4, Car5, Car6, Car7, Car8, Car9, Car10, Car11, Car12)
+
+    val street: Network = Network(capacity = 7)
+
+    for (car in street.testScenario(carList)) {
+        println("Car: \"${car.carname}\"")
+
+    }
+
 
 }
 
