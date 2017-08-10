@@ -1,7 +1,7 @@
 package traffic_simulation2
 
 
-class Cars ( var carName : String, var driving : Boolean)
+class Car ( var carName : String, var driving : Boolean)
 {
 
     }

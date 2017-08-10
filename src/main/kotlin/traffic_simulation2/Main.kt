@@ -14,7 +14,7 @@ fun main(args: Array<String>) {
 
 }
 
-fun readCsvFile (fileName: String) : Cars{
+fun readCsvFile (fileName: String) : Car{
 
 // the input (cars and their interest to drive) is given as a CSV file
 // this function is used to parse and read the CSV given data
@@ -32,7 +32,7 @@ fun readCsvFile (fileName: String) : Cars{
 
 
 // creating of a listOfCars of the class Cars
-    val listOfCars: MutableList<Cars> = mutableListOf()
+    val listOfCars: MutableList<Car> = mutableListOf()
 
 
 // here we search the rows of the given csv list for all cars and assign the carName and driving variable
@@ -43,9 +43,9 @@ for (car in allRows) {
     val secondValue: String = car.values.get(1) // second value of the csv assigned to driving status
     val drivingStatus = secondValue.toBoolean()
 
-    listOfCars.add(Cars(carName = firstValue, driving = drivingStatus))
+    listOfCars.add(Car(carName = firstValue, driving = drivingStatus))
 }
-return Cars // error here....
+return Car // error here....
 }
 
 // function to parse the kotlin files as csv
