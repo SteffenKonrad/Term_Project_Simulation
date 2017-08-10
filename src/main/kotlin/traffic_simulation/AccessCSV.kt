@@ -15,7 +15,3 @@ class AccessCSV {
         return FileWriter(file)
     }
 }
-
-/**
- * Created by Hendrik on 10.08.2017.
- */

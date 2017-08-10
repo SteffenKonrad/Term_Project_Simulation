@@ -11,10 +11,9 @@ import com.univocity.parsers.csv.CsvWriterSettings
 fun main(args: Array<String>) {
 
 
-
 }
 
-fun readCsvFile (fileName: String) : Car{
+fun readCsvFile(fileName: String): Car {
 
 // the input (cars and their interest to drive) is given as a CSV file
 // this function is used to parse and read the CSV given data
@@ -37,20 +36,20 @@ fun readCsvFile (fileName: String) : Car{
 
 // here we search the rows of the given csv list for all cars and assign the carName and driving variable
 
-val allRows: MutableList<Record> = csvParser.parseAllRecords(reader)
-for (car in allRows) {
-    val firstValue: String = car.values.get(0)  //first value of csv assigned to the cars name
-    val secondValue: String = car.values.get(1) // second value of the csv assigned to driving status
-    val drivingStatus = secondValue.toBoolean()
+    val allRows: MutableList<Record> = csvParser.parseAllRecords(reader)
+    for (car in allRows) {
+        val firstValue: String = car.values.get(0)  //first value of csv assigned to the cars name
+        val secondValue: String = car.values.get(1) // second value of the csv assigned to driving status
+        val drivingStatus = secondValue.toBoolean()
 
-    listOfCars.add(Car(carName = firstValue, driving = drivingStatus))
-}
-return Car // error here....
+        listOfCars.add(Car(carName = firstValue, driving = drivingStatus))
+    }
+    return Car // error here....
 }
 
 // function to parse the kotlin files as csv
 
-fun outputToCsv (fileName: String){
+fun outputToCsv(fileName: String) {
     val settings = CsvWriterSettings()
     settings.format.setLineSeparator("\n")
 
@@ -62,7 +61,7 @@ fun outputToCsv (fileName: String){
 
 // scenario function to test if everything works
 
-fun  scenario() {
+fun scenario() {
 
 }
 
