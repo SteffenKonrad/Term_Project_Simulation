@@ -1,6 +1,6 @@
 package traffic_simulation2
 
- data class Network (var capacity: Int) {
+ class Network (var capacity: Int) {
 
 
      val listOfDrivingCars: MutableList<Cars> = mutableListOf()
