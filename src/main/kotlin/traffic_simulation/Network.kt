@@ -5,7 +5,7 @@ import javax.swing.SizeRequirements
 class Network(var capacity: Int) {
 
     // function to tally the cars on the road
-    fun requiredcapacity (cars: List<Car>): Int {
+    fun requiredcapacity(cars: List<Car>): Int {
         var requiredcapacity: Int = 0
 
         for (car in cars) {
@@ -30,14 +30,14 @@ class Network(var capacity: Int) {
         val requirement: Int = requiredcapacity(carList)
         val compare: Boolean = comparison(requirement)
 
-            if (compare){
-                for (car in carList) {
-                    if(car.driving){
-                        val delayed = true
-                        car.gettingDelayed = delayed
-                    }
+        if (compare) {
+            for (car in carList) {
+                if (car.driving) {
+                    val delayed = true
+                    car.gettingDelayed = delayed
                 }
             }
+        }
         return carList
 
     }
