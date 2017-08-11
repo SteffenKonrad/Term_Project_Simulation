@@ -1,11 +1,9 @@
 package traffic_simulation
 
-import javax.swing.SizeRequirements
-
 class Network(var capacity: Int) {
 
     // function to tally the cars on the road
-    fun requiredcapacity(cars: List<Car>): Int {
+    fun neededCapacity(cars: List<Car>): Int {
         var requiredcapacity: Int = 0
 
         for (car in cars) {
@@ -15,11 +13,8 @@ class Network(var capacity: Int) {
         return requiredcapacity
     }
 
-    /** function to compare number of driving cars to the capacity and let the network decides wether a car drives or
-     * is delayed due to traffic jam
-     * must be created
-     */
-    fun comparison(requirement: Int): Boolean {
+
+    fun comparison(requirement: Int): Boolean {     // what is requirement and where is this set?
         if (capacity <= requirement) {
             return true
         }
@@ -27,7 +22,7 @@ class Network(var capacity: Int) {
     }
 
     fun testScenario(carList: List<Car>): List<Car> {
-        val requirement: Int = requiredcapacity(carList)
+        val requirement: Int = neededCapacity(carList)
         val compare: Boolean = comparison(requirement)
 
         if (compare) {
