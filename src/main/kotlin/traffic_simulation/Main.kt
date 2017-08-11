@@ -13,7 +13,7 @@ fun main(args: Array<String>) {
     scenario()
 }
 
-fun readCsvFile(fileName: String): Car {
+fun readCsvFile(fileName: String): MutableList<Car> {
 
 // the input (cars and their interest to drive) is given as a CSV file
 // this function is used to parse and read the CSV given data
@@ -40,11 +40,11 @@ fun readCsvFile(fileName: String): Car {
     for (car in allRows) {
         val firstValue: String = car.values.get(0)  //first value of csv assigned to the cars name
         val secondValue: String = car.values.get(1) // second value of the csv assigned to driving status
-        val drivingStatus = secondValue.toBoolean()
+        val drivingStatus: Boolean = secondValue.toBoolean()
 
         listOfCars.add(Car(carname = firstValue, driving = drivingStatus))
     }
-    return Car // error here....
+    return listOfCars
 }
 
 // function to parse the kotlin files as csv
@@ -79,14 +79,12 @@ fun scenario() {
 
     val carList: List<Car> = listOf(Car1, Car2, Car3, Car4, Car5, Car6, Car7, Car8, Car9, Car10, Car11, Car12)
 
-    val street: Network = Network(capacity = 7)
+    val street: Network = Network(capacity =7)
 
     for (car in street.testScenario(carList)) {
-        println("Car: \"${car.carname}\"")
+        println("Car: \"${car.carname}\" Want to drive:\"${car.driving}\" and is delayed:\"${car.gettingDelayed}\"")
 
     }
-
-
 }
 
 
