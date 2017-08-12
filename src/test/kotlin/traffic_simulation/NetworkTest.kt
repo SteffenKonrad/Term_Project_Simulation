@@ -5,7 +5,7 @@ import org.junit.Assert.assertEquals
 import traffic_simulation.Car
 import traffic_simulation.Network
 
-class Network_test {
+class NetworkTest {
 
     @Test
 
