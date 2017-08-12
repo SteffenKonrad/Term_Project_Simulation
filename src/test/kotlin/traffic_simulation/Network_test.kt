@@ -19,9 +19,7 @@ class Network_test {
             if (car.driving)
                 requiredcapacity = requiredcapacity + 1
         }
-        return requiredcapacity
-
-
+       
         //assert
         assertEquals(1, requiredcapacity)
     }
