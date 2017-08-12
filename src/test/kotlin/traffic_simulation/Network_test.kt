@@ -9,18 +9,16 @@ class Network_test {
 
     @Test
 
-    fun requiredCapacityTest(cars : List<Car>) {
+    fun requiredCapacityTest() {
 
         //setup
         var requiredcapacity: Int = 0
-
+        val Car1: Car = Car(carname = "Elenor", driving = true)
         //execute
-        for (car in cars) {
-            if (car.driving)
+
+            if (Car1.driving)
                 requiredcapacity = requiredcapacity + 1
-        }
-       
-        //assert
+          //assert
         assertEquals(1, requiredcapacity)
     }
 }
