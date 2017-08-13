@@ -37,6 +37,15 @@ After everything is set up, we go on to the second part of the project where we 
 
 Our task is to write a scenario function with about a dozen cars and to keep them track of wether they can drive or were delayed. This information shall be printed at the end of the simulation. To write a main programm, which uses [Univocity Parsers](https://github.com/uniVocity/univocity-parsers) to parse input and to write the resulting data as *CSV* is the next step of this part. Last but not least we have to extend this README by writing a user documentation, explaining users how to use the program. After all this is finished, we are able to release version 2.0.
 
+How to launch the application :
+The program is launched by launching the .jar file of release. Because of this action the traffic-simulation will output a CSV-file. This is build on your local computer an is named “result.csv”. To get to the results open this file.
+How to get the .jar-file:
+Take a look at the end of the release section and download the .jar-file.
+
+Launching the program with Windows Power Shell:
+Launch PowerShell and set the command “java –jar “C:\Users\Name\Documents\traffic_simultion-2.0.jar””
+Now an output of the program should appear on the console: The output is equal to the content of the .csv-file named “result.csv”.
+
 
 ## Part 3: Extend simulation to cover an entire day
 
