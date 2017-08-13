@@ -13,18 +13,17 @@ class Network(var capacity: Int) {
         return requiredcapacity
     }
 
-    // function compares the capacity and the demand
-    fun enoughCapacity(requirement: Int): Boolean {
+
+    fun comparison(requirement: Int): Boolean {     // what is requirement and where is this set?
         if (capacity <= requirement) {
             return true
         }
         return false
     }
 
-    // function asks whether the capacity is exhausted and whether or not a delay occurs
     fun testScenario(carList: List<Car>): List<Car> {
         val requirement: Int = neededCapacity(carList)
-        val compare: Boolean = enoughCapacity(requirement)
+        val compare: Boolean = comparison(requirement)
 
         if (compare) {
             for (car in carList) {
@@ -35,5 +34,6 @@ class Network(var capacity: Int) {
             }
         }
         return carList
+
     }
 }
