@@ -9,11 +9,11 @@ class MainTest {
 
     @Test
 
-    fun carDrives() {
+    fun carDrives () {
         //setup
         // creating a list of cars with a given capacity
         val Car1: Car = Car(carname = "Elenor", driving = false)
-        val Car2: Car = Car(carname = "K.I.T.T.", driving = true)
+        val Car2: Car = Car(carname = "K.I.T.T.", driving = true )
         val Car3: Car = Car(carname = "Herbie", driving = true)
         val Car4: Car = Car(carname = "PussyWagon", driving = true)
         val Car5: Car = Car(carname = "McQueen", driving = true)
@@ -32,11 +32,14 @@ class MainTest {
         // checking the list if the car is driving or not
         for (car in street.testScenario(scenarioList)) {
             if (car.driving) {
-                assertEquals(true, car.driving)
-            } else {
+                assertEquals(true,car.driving )
+            }
+             else {
                 assertEquals(false, car.driving)
             }
         }
     }
 }
-
+/**
+ * Created by Florian Kirch on 12.08.2017.
+ */

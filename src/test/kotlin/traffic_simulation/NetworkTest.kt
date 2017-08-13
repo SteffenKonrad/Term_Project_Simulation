@@ -16,10 +16,12 @@ class NetworkTest {
         val Car1: Car = Car(carname = "Elenor", driving = true)
         //execute
 
-        if (Car1.driving)
-            requiredcapacity = requiredcapacity + 1
-        //assert
+            if (Car1.driving)
+                requiredcapacity = requiredcapacity + 1
+          //assert
         assertEquals(1, requiredcapacity)
     }
 }
-
+/**
+ * Created by Florian Kirch on 12.08.2017.
+ */

@@ -2,7 +2,7 @@ package traffic_simulation
 
 import java.io.*
 
-// This class is used to create the "getReader" & the "getWriter" function that is used in the CSV parser settings
+// This class is used to create the "getReader" function that is used in the CSV parser settings
 
 class AccessCSV {
 
