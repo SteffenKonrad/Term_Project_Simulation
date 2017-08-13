@@ -48,9 +48,9 @@ fun outputToCsv(results: List<Car>, fileName: String = "results.csv") {
     settings.format.setLineSeparator("\n")
 
       //val carname = "Carname:"
-    val checkdelay = "is delayed?"
+    val checkdelays = "is delayed?"
     val carRows: MutableList<Array<Any>> = mutableListOf()
-    val row: Array<Any> = arrayOf(" ",checkdelay)
+    val row: Array<Any> = arrayOf(" ",checkdelays)
     carRows.add(row)
 
     for (result in results) {
@@ -75,7 +75,7 @@ carRows.add(row)
 csvWriter.writeRowsAndClose(carRows)
  */
 fun buildCSV() {
-    val street: Network = Network(capacity = 9)
+    val street: Network = Network(capacity = 2)
     val carsCSV: List<Car> = readCsvFile(fileName = "readingdemand.csv")
 
     outputToCsv(street.testScenario(carsCSV))
@@ -100,7 +100,7 @@ fun scenario() {
 
     val scenarioList: List<Car> = listOf(Car1, Car2, Car3, Car4, Car5, Car6, Car7, Car8, Car9, Car10, Car11, Car12)
 
-    val street: Network = Network(capacity = 9)
+    val street: Network = Network(capacity = 2)
 
     for (car in street.testScenario(scenarioList)) {
         if (car.driving) {
