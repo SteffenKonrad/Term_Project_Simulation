@@ -9,6 +9,8 @@ import com.univocity.parsers.csv.CsvWriterSettings
 fun main(args: Array<String>) {
 
     scenario()
+
+    buildCSV()
 }
 
 fun readCsvFile(fileName: String): MutableList<Car> {
@@ -18,7 +20,7 @@ fun readCsvFile(fileName: String): MutableList<Car> {
 
     val settings = CsvParserSettings()
     val csvParser = CsvParser(settings)                       // creates a CSV parser
-    val reader = AccessCSV().getReader(fileName)
+    val reader = AccessCSV().getReader("/" +fileName)
     settings.isHeaderExtractionEnabled = true
     settings.format.setLineSeparator("\n")                    // line separator can be changed
 
@@ -36,29 +38,50 @@ fun readCsvFile(fileName: String): MutableList<Car> {
     }
     return listOfCars
 }
-
-// function to parse the resulting kotlin files as csv
-fun outputToCsv(fileName: String) {
+        // function to parse the resulting kotlin files as csv
+fun outputToCsv(results: List<Car>, fileName: String = "results.csv") {
 
     val settings = CsvWriterSettings()
     val writer = AccessCSV().getWriter(fileName)
-    val csvWriter = CsvWriter(writer, settings)
-    csvWriter.writeHeaders("Car Name", "Driving Status")
+    val csvWriter = CsvWriter(writer, CsvWriterSettings())
+    csvWriter.writeHeaders("Carname", "Driving Status")
     settings.format.setLineSeparator("\n")
 
-    /** here needs to be added, what results (drives vs delay) we want to parse as csv
-     * might be solved with a for-loop, adapted from energy model:
+      //val carname = "Carname:"
+    val checkdelay = "is delayed?"
     val carRows: MutableList<Array<Any>> = mutableListOf()
-    for (car in listOfCars ) {
-    val name = car.name
-    val checkDelay= car.driving
-    val row: Array<Any> = arrayOf(name, checkDelay)
+    val row: Array<Any> = arrayOf(" ",checkdelay)
     carRows.add(row)
-    }
 
+    for (result in results) {
+        val carname = result.carname
+        val checkdelay = result.gettingDelayed.toString()
+        val rows: Array<Any> = arrayOf(carname, checkdelay)
+        carRows.add(rows)
+    }
     csvWriter.writeRowsAndClose(carRows)
-     */
 }
+
+/** here needs to be added, what results (drives vs delay) we want to parse as csv
+ * might be solved with a for-loop, adapted from energy model:
+val carRows: MutableList<Array<Any>> = mutableListOf()
+for (car in listOfCars ) {
+val name = car.name
+val checkDelay= car.driving
+val row: Array<Any> = arrayOf(name, checkDelay)
+carRows.add(row)
+}
+
+csvWriter.writeRowsAndClose(carRows)
+ */
+fun buildCSV() {
+    val street: Network = Network(capacity = 9)
+    val carsCSV: List<Car> = readCsvFile(fileName = "readingdemand.csv")
+
+    outputToCsv(street.testScenario(carsCSV))
+
+}
+
 
 fun scenario() {
 
@@ -88,6 +111,8 @@ fun scenario() {
         }
     }
 }
+
+
 
 
 
