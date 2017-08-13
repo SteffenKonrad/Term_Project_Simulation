@@ -9,15 +9,14 @@ class MainTest {
 
     @Test
 
-    fun tooManyCarsOnTrack ( ) {
+    fun carDrives () {
         //setup
         // creating a list of cars with a given capacity
-        var wantsToDriveAndIsDelayed: Boolean = false
-        val Car1: Car = Car(carname = "Elenor", driving = true)
+        val Car1: Car = Car(carname = "Elenor", driving = false)
         val Car2: Car = Car(carname = "K.I.T.T.", driving = true )
         val Car3: Car = Car(carname = "Herbie", driving = true)
         val Car4: Car = Car(carname = "PussyWagon", driving = true)
-        val Car5: Car = Car(carname = "McQueen", driving = false)
+        val Car5: Car = Car(carname = "McQueen", driving = true)
         val Car6: Car = Car(carname = "GeneralLee", driving = true)
         val Car7: Car = Car(carname = "MantaManta", driving = true)
         val Car8: Car = Car(carname = "AMCPacer", driving = true)
@@ -30,17 +29,15 @@ class MainTest {
         val street: Network = Network(capacity = 9)
 
         //execute   //assert
-        // there are too many cars on track so the wantsToDriveAndIsDelayed is set (10 to 9 )
+        // checking the list if the car is driving or not
         for (car in street.testScenario(scenarioList)) {
             if (car.driving) {
-                var wantsToDriveAndIsDelayed = true
-            } else {
-                var wantsToDriveAndIsDelayed =false            }
-            assertEquals(false,wantsToDriveAndIsDelayed )
+                assertEquals(true,car.driving )
+            }
+             else {
+                assertEquals(false, car.driving)
+            }
         }
-
-     
-        //comparison wether the given value of wantsToDriveAndIsDelayed is the same as the given or the expected one
     }
 }
 /**
